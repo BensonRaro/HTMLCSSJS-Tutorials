@@ -1,0 +1,81 @@
+.general-container {
+  display: flex;
+  height: 21rem;
+  width: 55vw;
+  margin: 0 auto;
+  max-width: 55vw;
+  margin-top: 220px;
+}
+
+.radio {
+  display: none;
+}
+
+.content {
+  background: transparent;
+  /* Images available together with the source code */
+  background-image: url("./images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.05, 0.6, 0.39, 0.94);
+}
+
+.content::before {
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.content:hover {
+  box-shadow: 0.7rem 0.7rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.content:nth-of-type(2) {
+  background: transparent;
+  background-image: url("./images/6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content:nth-of-type(3) {
+  background: transparent;
+  background-image: url("./images/5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content:nth-of-type(4) {
+  background: transparent;
+  background-image: url("./images/4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio:checked + .content {
+  border: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+  flex: 9;
+}
+
+html {
+  background: #202029;
+}
